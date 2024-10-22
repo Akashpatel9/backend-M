@@ -89,7 +89,7 @@ export const signInHandler = async (req, res) => {
 
         // generating jwt token
         const token = await jwt.sign({ email }, process.env.JWT_SECRET, {
-            expiresIn: '2h'
+            expiresIn: '24h'
         });
 
         return res.status(200).json({
